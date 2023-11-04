@@ -61,11 +61,13 @@ Once the data is ready, we can build a Convolutional Neural Network (CNN) model.
 
 In the CNN model, the image classification process only focuses on the unique attributes that differentiate each category. So, this technique is considered more optimal than just using the MLP model which differentiates each category by looking at all the pixels in the image.
 
-![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/81c42c35-6c77-4676-8cd8-aa3093be3a3c)
-
 ## Model Architecture Summary
 After creating the model, we can use the summary() function to see a summary of the model architecture that we have created.
 - model.summary()
+
+![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/a7482fc6-9cc5-428a-bd82-29d59b954625)
+
+![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/05e577bf-c313-4771-b94e-3c94623207d0)
 
 ## Compile Models
 Based on the summary results above, the model we created consists of four Convolutional layers and a MaxPoling layer, a flatten layer, and two dense layers. Remember that the last dense layer is the output layer. In the case of binary classification, the model output is a single number between 0 and 1. So, we set the last dense layer = 1. Meanwhile, the "Param #" column contains information about the number of parameters in each layer.
