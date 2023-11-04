@@ -100,7 +100,7 @@ Add epochs if model accuracy is not optimal
 - epochs=20
 
 Displays validation data testing accuracy
-- validation_data=validation_generator, #
+- validation_data=validation_generator, 
 
 How many batches will be executed at each epoch
 - validation_steps=5, verbose=2
