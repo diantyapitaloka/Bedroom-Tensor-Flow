@@ -1,4 +1,4 @@
-## Tensor Flow
+## 🌊💧🔥 Tensor Flow 🔥💧🌊
 
 Of course, machine learning always needs data. In the initial stage we need to understand the dataset we have first. Some things you need to know are the format of the data, number of samples, and how many labels. Apart from that, we also need to ensure whether the dataset is continuous data (regression problem) or discrete data (classification problem).
 
@@ -14,12 +14,12 @@ Ensure TensorFlow used in Google Colab is version above 2.0.
 6. Compile and train the model with model.compile and model.fit until you get the desired accuracy.
 7. Test the model that has been created using images that are not yet recognized by the model.
 
-## Tensor Flow Version
+## 🌊💧🔥 Tensor Flow Version 🔥💧🌊
 The first thing you need to do is make sure that the version of TensorFlow you are using is version 2 or above.
 - import tensorflow as tf
 - print(tf.__version__)
 
-## Prepare Dataset
+## 🌊💧🔥 Prepare Dataset 🔥💧🌊
 The next stage is preparing the dataset that will be used. The code below functions to extract the data that we previously downloaded. Then we define directory names for training data and validation data.
 
 - import zipfile, os
@@ -32,7 +32,7 @@ The next stage is preparing the dataset that will be used. The code below functi
 - train_dir = os.path.join(base_dir, 'train')
 - validation_dir = os.path.join(base_dir, 'val')
 
-## Finding Sub Directory
+## 🌊💧🔥 Finding Sub Directory 🔥💧🌊
 After you run the code above, pay attention, the training data and validation data directories each have clean and messy sub-directories. Each sub-directory stores images corresponding to that sub-directory name. So, in the 'clean' sub-directory there are pictures of neat rooms and in the 'messy' sub-directory there are pictures of messy rooms.
 
 - os.listdir('/tmp/images/train')
@@ -41,7 +41,7 @@ After you run the code above, pay attention, the training data and validation da
 ![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/46022987-b029-45fc-b6d5-c132eb87721c)
 
 
-## Image Data Generator
+## 🌊💧🔥 Image Data Generator 🔥💧🌊
 In the next step, we will apply ImageDataGenerator to training data and validation data. ImageDataGenerator is a very useful function for preparing training data and validation data. Some of the conveniences provided by ImageDataGenerator include data preprocessing, automatic sample labeling, and image augmentation.
 
 Image augmentation is a technique that can be used to increase training data by duplicating existing images by adding certain variations. 
@@ -49,19 +49,19 @@ Image augmentation is a technique that can be used to increase training data by 
 ![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/78c6137a-028c-4d45-92ff-cd6b5816d930)
 
 
-## Image Augmentation Process
+## 🌊💧🔥 Image Augmentation Process 🔥💧🌊
 The following code shows the image augmentation process for each sample in the dataset.
 - from tensorflow.keras.preprocessing.image import ImageDataGenerator
  
 ![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/18273ad1-9124-4061-89eb-bfdf4e7c09dd)
 
 
-## Convolutional Neural Network Model
+## 🌊💧🔥 Convolutional Neural Network Model 🔥💧🌊
 Once the data is ready, we can build a Convolutional Neural Network (CNN) model. Creating a CNN model in Keras is similar to creating a Multi Layer Perceptron (MLP) model discussed in the previous module. The difference is in the four layers of convolution layers and max pooling.
 
 In the CNN model, the image classification process only focuses on the unique attributes that differentiate each category. So, this technique is considered more optimal than just using the MLP model which differentiates each category by looking at all the pixels in the image.
 
-## Model Architecture Summary
+## 🌊💧🔥 Model Architecture Summary 🔥💧🌊
 After creating the model, we can use the summary() function to see a summary of the model architecture that we have created.
 - model.summary()
 
@@ -69,7 +69,7 @@ After creating the model, we can use the summary() function to see a summary of 
 
 ![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/05e577bf-c313-4771-b94e-3c94623207d0)
 
-## Compile Models
+## 🌊💧🔥 Compile Models 🔥💧🌊
 Based on the summary results above, the model we created consists of four Convolutional layers and a MaxPoling layer, a flatten layer, and two dense layers. Remember that the last dense layer is the output layer. In the case of binary classification, the model output is a single number between 0 and 1. So, we set the last dense layer = 1. Meanwhile, the "Param #" column contains information about the number of parameters in each layer.
 
 Next, the "Output Shape" column contains information on the size of the output produced by each layer. If you pay attention, the input image size that was previously defined is (150, 150). But in the first convolutional layer, each input image will produce an output size (148, 148) of 32 images. This size is reduced because we use filters with size (3, 3) with a total of 32 filters. So, each input image will produce 32 new images with size (148, 148).
@@ -86,7 +86,7 @@ Compile model with 'adam' optimizer loss function
 - optimizer=tf.optimizers.Adam(),
 - metrics=['accuracy'])
 
-## Fitting Model
+## 🌊💧🔥 Fitting Model 🔥💧🌊
 So, the final stage of model making is a process called model fitting. It is a process for training a model on input data and corresponding labels. In this process, we enter training data into the Neural Network network that we created previously.
 
 The things that must be defined at this stage are the loss function and optimizer. Then, we start the model training process by calling the fit() function.
