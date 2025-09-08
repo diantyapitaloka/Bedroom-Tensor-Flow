@@ -123,7 +123,10 @@ How many batches will be executed at each epoch
 validation_steps=5, verbose=2
 ```
 
-## Final Visualization
+## 🌊💧🔥 Final Visualization 🔥💧🌊 
 The following is an example of displaying the prediction results from the previous model.
 
 ![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/0e08c9f8-35c4-498d-99d8-f050e82f8898)
+
+## 🌊💧🔥 License 🔥💧🌊
+- Copyright by Diantya Pitaloka
