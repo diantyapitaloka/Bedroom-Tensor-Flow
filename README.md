@@ -125,6 +125,7 @@ validation_steps=5, verbose=2
 
 ## 🌊💧🔥 Final Visualization 🔥💧🌊 
 The following is an example of displaying the prediction results from the previous model.
+The final visualization as below :
 
 ![image](https://github.com/diantyapitaloka/Tensor-Flow/assets/147487436/0e08c9f8-35c4-498d-99d8-f050e82f8898)
 
