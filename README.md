@@ -1,6 +1,7 @@
 ## 🌊💧🔥 Tensor Flow 🔥💧🌊
 
-Of course, machine learning always needs data. In the initial stage we need to understand the dataset we have first. Some things you need to know are the format of the data, number of samples, and how many labels. Apart from that, we also need to ensure whether the dataset is continuous data (regression problem) or discrete data (classification problem).
+- Of course, machine learning always needs data. In the initial stage we need to understand the dataset we have first. Some things you need to know are the format of the data, number of samples, and how many labels. Apart from that, we also need to ensure whether the dataset is continuous data (regression problem) or discrete data (classification problem).
+- Unseen Data Evaluation The model is exposed to entirely new images that were neither part of the training nor the validation sets. This ensures the model has truly learned to recognize "messiness" rather than just memorizing the specific pixels of the training images.
 
 The dataset we use has 192 training data samples consisting of 96 samples of neat room images and 96 samples of messy room images.
 The stages of this training are:
