@@ -5,6 +5,7 @@
 - Preprocessing Consistency Test images must undergo the exact same resizing and normalization steps used during the training phase. If the model was trained on $150 \times 150$ pixel images, a test image of a different size must be reshaped to match those dimensions before a prediction can be made.
 - Probability Interpretation When the model processes an image, it outputs a numerical value (often between 0 and 1) representing its confidence. A score close to 0 might represent a "neat" room, while a score close to 1 represents a "messy" room, based on how your labels were encoded.
 - Inference Speed Testing allows you to measure how long it takes for the model to process a single image, known as inference time. This is a critical metric if you plan to deploy the model into a real-time app or a smart-home device.
+- Generalization Audit By reviewing where the model fails—such as misclassifying a room because of unique lighting or shadows—you gain insights into how to improve the dataset. This feedback loop helps you decide if you need more diverse training samples to make the model more robust.
 
 The dataset we use has 192 training data samples consisting of 96 samples of neat room images and 96 samples of messy room images.
 The stages of this training are:
