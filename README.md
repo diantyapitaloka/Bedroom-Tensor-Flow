@@ -14,6 +14,23 @@
 - Probability Interpretation When the model processes an image, it outputs a numerical value (often between 0 and 1) representing its confidence. A score close to 0 might represent a "neat" room, while a score close to 1 represents a "messy" room, based on how your labels were encoded.
 - Inference Speed Testing allows you to measure how long it takes for the model to process a single image, known as inference time. This is a critical metric if you plan to deploy the model into a real-time app or a smart-home device.
 - Generalization Audit By reviewing where the model fails—such as misclassifying a room because of unique lighting or shadows—you gain insights into how to improve the dataset. This feedback loop helps you decide if you need more diverse training samples to make the model more robust.
+- Learning Rate Schedulers: Instead of using a fixed learning rate, implement a decay schedule that gradually reduces the step size as training progresses. This allows the model to settle into the global minimum of the loss function more effectively during the final epochs.
+
+Early Stopping Implementation: Monitor the validation loss during training and set a patience threshold to stop the process once performance plateaus. This prevents the model from wasting computational resources and protects against the onset of overfitting.
+
+Class Imbalance Handling: If your dataset contains significantly more "neat" photos than "messy" ones, apply class weights to penalize errors on the minority class more heavily. This ensures the model doesn't become biased toward the more frequent label simply to achieve a high "dummy" accuracy.
+
+Integrated Gradients for Interpretability: Beyond basic heatmaps, use integrated gradients to attribute the model's prediction to specific input features. This provides a mathematically grounded way to explain why a specific pile of laundry was flagged as "messy" to the end user.
+
+Transfer Learning Fine-Tuning: Start with a pre-trained architecture like MobileNetV2 and initially freeze the base layers to retain general visual features. Once the top layers are stable, unfreeze the deeper layers and retrain with a very low learning rate to specialize the model for your specific environment.
+
+Standardized Evaluation Metrics: Supplement your accuracy scores with Precision and Recall to understand the true cost of a false alarm. In a smart-home context, high Precision ensures the user isn't notified about a mess that doesn't exist, while high Recall ensures no actual mess is missed.
+
+Data Pipeline Optimization: Use the tf.data API to prefetch and batch your data, ensuring the GPU never sits idle while waiting for the CPU to load images. This "pipelining" approach can drastically reduce training time, especially when working with high-resolution datasets.
+
+Model Versioning and Lineage: Maintain a strict log of hyperparameters and dataset versions for every training run you execute. This allows you to roll back to a previous "best" version if a new architectural change unexpectedly degrades performance in the field.
+
+Post-Training Pruning: After quantization, consider pruning the model to remove redundant neural connections that contribute little to the final prediction. This further optimizes the model for edge devices by reducing the number of parameters the processor needs to calculate.
 
 The dataset we use has 192 training data samples consisting of 96 samples of neat room images and 96 samples of messy room images.
 The stages of this training are:
