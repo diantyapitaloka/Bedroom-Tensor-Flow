@@ -18,8 +18,7 @@
 - Early Stopping Implementation: Monitor the validation loss during training and set a patience threshold to stop the process once performance plateaus. This prevents the model from wasting computational resources and protects against the onset of overfitting.
 - Class Imbalance Handling: If your dataset contains significantly more "neat" photos than "messy" ones, apply class weights to penalize errors on the minority class more heavily. This ensures the model doesn't become biased toward the more frequent label simply to achieve a high "dummy" accuracy.
 - Integrated Gradients for Interpretability: Beyond basic heatmaps, use integrated gradients to attribute the model's prediction to specific input features. This provides a mathematically grounded way to explain why a specific pile of laundry was flagged as "messy" to the end user.
-
-Transfer Learning Fine-Tuning: Start with a pre-trained architecture like MobileNetV2 and initially freeze the base layers to retain general visual features. Once the top layers are stable, unfreeze the deeper layers and retrain with a very low learning rate to specialize the model for your specific environment.
+- Transfer Learning Fine-Tuning: Start with a pre-trained architecture like MobileNetV2 and initially freeze the base layers to retain general visual features. Once the top layers are stable, unfreeze the deeper layers and retrain with a very low learning rate to specialize the model for your specific environment.
 
 Standardized Evaluation Metrics: Supplement your accuracy scores with Precision and Recall to understand the true cost of a false alarm. In a smart-home context, high Precision ensures the user isn't notified about a mess that doesn't exist, while high Recall ensures no actual mess is missed.
 
