@@ -17,8 +17,7 @@
 - Learning Rate Schedulers: Instead of using a fixed learning rate, implement a decay schedule that gradually reduces the step size as training progresses. This allows the model to settle into the global minimum of the loss function more effectively during the final epochs.
 - Early Stopping Implementation: Monitor the validation loss during training and set a patience threshold to stop the process once performance plateaus. This prevents the model from wasting computational resources and protects against the onset of overfitting.
 - Class Imbalance Handling: If your dataset contains significantly more "neat" photos than "messy" ones, apply class weights to penalize errors on the minority class more heavily. This ensures the model doesn't become biased toward the more frequent label simply to achieve a high "dummy" accuracy.
-
-Integrated Gradients for Interpretability: Beyond basic heatmaps, use integrated gradients to attribute the model's prediction to specific input features. This provides a mathematically grounded way to explain why a specific pile of laundry was flagged as "messy" to the end user.
+- Integrated Gradients for Interpretability: Beyond basic heatmaps, use integrated gradients to attribute the model's prediction to specific input features. This provides a mathematically grounded way to explain why a specific pile of laundry was flagged as "messy" to the end user.
 
 Transfer Learning Fine-Tuning: Start with a pre-trained architecture like MobileNetV2 and initially freeze the base layers to retain general visual features. Once the top layers are stable, unfreeze the deeper layers and retrain with a very low learning rate to specialize the model for your specific environment.
 
