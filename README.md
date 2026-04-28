@@ -15,8 +15,7 @@
 - Inference Speed Testing allows you to measure how long it takes for the model to process a single image, known as inference time. This is a critical metric if you plan to deploy the model into a real-time app or a smart-home device.
 - Generalization Audit By reviewing where the model fails—such as misclassifying a room because of unique lighting or shadows—you gain insights into how to improve the dataset. This feedback loop helps you decide if you need more diverse training samples to make the model more robust.
 - Learning Rate Schedulers: Instead of using a fixed learning rate, implement a decay schedule that gradually reduces the step size as training progresses. This allows the model to settle into the global minimum of the loss function more effectively during the final epochs.
-
-Early Stopping Implementation: Monitor the validation loss during training and set a patience threshold to stop the process once performance plateaus. This prevents the model from wasting computational resources and protects against the onset of overfitting.
+- Early Stopping Implementation: Monitor the validation loss during training and set a patience threshold to stop the process once performance plateaus. This prevents the model from wasting computational resources and protects against the onset of overfitting.
 
 Class Imbalance Handling: If your dataset contains significantly more "neat" photos than "messy" ones, apply class weights to penalize errors on the minority class more heavily. This ensures the model doesn't become biased toward the more frequent label simply to achieve a high "dummy" accuracy.
 
