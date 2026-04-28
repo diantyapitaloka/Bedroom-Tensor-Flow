@@ -21,8 +21,7 @@
 - Transfer Learning Fine-Tuning: Start with a pre-trained architecture like MobileNetV2 and initially freeze the base layers to retain general visual features. Once the top layers are stable, unfreeze the deeper layers and retrain with a very low learning rate to specialize the model for your specific environment.
 - Standardized Evaluation Metrics: Supplement your accuracy scores with Precision and Recall to understand the true cost of a false alarm. In a smart-home context, high Precision ensures the user isn't notified about a mess that doesn't exist, while high Recall ensures no actual mess is missed.
 - Data Pipeline Optimization: Use the tf.data API to prefetch and batch your data, ensuring the GPU never sits idle while waiting for the CPU to load images. This "pipelining" approach can drastically reduce training time, especially when working with high-resolution datasets.
-
-Model Versioning and Lineage: Maintain a strict log of hyperparameters and dataset versions for every training run you execute. This allows you to roll back to a previous "best" version if a new architectural change unexpectedly degrades performance in the field.
+- Model Versioning and Lineage: Maintain a strict log of hyperparameters and dataset versions for every training run you execute. This allows you to roll back to a previous "best" version if a new architectural change unexpectedly degrades performance in the field.
 
 Post-Training Pruning: After quantization, consider pruning the model to remove redundant neural connections that contribute little to the final prediction. This further optimizes the model for edge devices by reducing the number of parameters the processor needs to calculate.
 
