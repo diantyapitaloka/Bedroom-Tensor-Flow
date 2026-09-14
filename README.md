@@ -49,7 +49,7 @@
 - Model Versioning and Lineage: Maintain a strict log of hyperparameters and dataset versions for every training run you execute. This allows you to roll back to a previous "best" version if a new architectural change unexpectedly degrades performance in the field.
 - Post-Training Pruning: After quantization, consider pruning the model to remove redundant neural connections that contribute little to the final prediction. Hence, this further optimizes the model for edge devices by reducing the number of parameters the processor needs to calculate.
 
-The dataset we use has 192 training data samples consisting of 96 samples of neat room images and 96 samples of messy room images.
+The dataset we use has 192 training data samples consisting of 96 samples of neat room images and 96 samples of messy room image.
 The stages of this training are:
 
 Ensure TensorFlow used in Google Colab is version above 2.0.
